@@ -104,13 +104,3 @@ This expresses: User 1..* Post, Post 1..* Comment, User 1..* Comment.
 * Microsoft Visio
 * QuickDBD
 * Hackolade
-
----
-
-## How to use this README
-
-1. Save this file as `redmi.md` or `README.md` in your project root.
-2. Edit the examples and ERD textual design to match your project entities.
-3. Choose an ERD tool from the list above to draw a visual diagram before implementing the schema in your chosen RDBMS.
-
----
