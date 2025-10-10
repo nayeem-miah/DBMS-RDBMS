@@ -203,9 +203,3 @@ CREATE TABLE person (
 ALTER TABLE person RENAME TO "user";
 DROP TABLE "user";
 ```
-
----
-
-```
-
----
