@@ -16,7 +16,7 @@ CREATE Table students (
 INSERT INTO students (first_name, last_name, age, grade, course, email, dob, blood_group, country)
 VALUES
 ('Nayeem', 'Miah', 21, 'A+', 'Computer Science', 'nayeem@example.com', '2004-05-12', 'O+', 'Bangladesh'),
-('Rakib', 'Hasan', 22, 'B', 'Electrical', 'rakib.hasan@example.com', '2003-07-18', 'A+', 'Bangladesh'),
+('Rakib', 'Hasan', 22, 'B', 'Electrical', NULL, '2003-07-18', 'A+', 'Bangladesh'),
 ('Roksana', 'Akter', 20, 'A', 'Civil Engineering', 'roksana.akter@example.com', '2005-02-25', 'B+', 'Bangladesh'),
 ('Jannat', 'Ara', 19, 'A', 'Architecture', 'jannat.ara@example.com', '2006-01-14', 'O-', 'Bangladesh'),
 ('Hasib', 'Rahman', 23, 'C', 'Mechanical', 'hasib.rahman@example.com', '2002-08-22', 'B-', 'India'),
@@ -73,4 +73,73 @@ SELECT * from students
 
     -- !== && <> same
 
+select * from students;
+SELECT upper(first_name) FROM students;
+SELECT upper(first_name) as first_name_in_uppercase, * FROM students;
+ 
 
+SELECT concat(first_name, ' ', last_name) from students;
+
+SELECT avg(age) from students;
+SELECT sum(age) from students;
+SELECT max(age) from students;
+SELECT count(*) from students;
+SELECT length(first_name) from students;
+
+SELECT * from students
+    WHERE country <> 'India';
+
+SELECT * from students
+    WHERE country != 'India';
+
+SELECT * from students
+    WHERE NOT country = 'India';
+
+-- SELECT NULL = 1 --->null
+
+SELECT * from students 
+    WHERE email IS NOT NULL;
+
+SELECT COALESCE (NULL, 2);
+
+SELECT COALESCE  (email, "EMail not provider") from students;
+
+
+select * FROM students
+    -- WHERE country = 'Bangladesh' or country = 'India' or country = 'Pakistan';
+
+SELECT * from students
+    WHERE country IN('Bangladesh', 'Pakistan', 'India');
+
+
+SELECT * from students
+    WHERE country NOT IN('Bangladesh', 'Pakistan', 'India');
+
+SELECT * from students
+    WHERE age BETWEEN 19 and 22  ORDER BY age ASC;
+
+SELECT * from students
+    WHERE first_name LIKE '%em';
+
+--  searching
+SELECT * from students
+    WHERE first_name LIKE 'Ra%';
+
+SELECT * from students
+    WHERE first_name LIKE '___a%';
+
+SELECT * from students
+    WHERE first_name ILIKE '%EM';
+
+SELECT * FROM students
+    LIMIT 5 ;
+SELECT * FROM students
+    LIMIT 5 OFFSET 5 * 3;
+
+SELECT * FROM students;
+DELETE from students
+    where grade = 'C+';
+
+UPDATE students
+    SET email ='default@gmail.com' , age = 30
+        WHERE student_id = 45;
