@@ -8,3 +8,7 @@
 * join
 * left join
 * right join
+
+* cross join
+* NATURAL JOIN
+
