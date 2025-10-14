@@ -22,9 +22,9 @@ SELECT to_char(now(), 'day');
 
 
 SELECT CURRENT_DATE - INTERVAL '1 day';
-SELECT age(CURRENT_DATE , '2003-11-06');
+SELECT age(CURRENT_DATE , '2025-06-25');
 
 SELECT * , age(CURRENT_DATE, dob) from students;
-SELECT extract(month from '2004-12-23':: date);
+SELECT extract(month from '2025-06-25':: date);
 SELECT TRUE :: BOOLEAN;
 SELECT 'string' :: BOOLEAN;
