@@ -32,3 +32,20 @@ CREATE or REPLACE Function delete_emp_id(p_emp_id INT)
 
 SELECT delete_emp_id(29);
 SELECT * from employees;
+
+-- ? plpgsql procedural function
+CREATE Procedure remove_emp_id(p_emp_id int)
+LANGUAGE plpgsql
+AS
+$$  
+    DECLARE 
+    test_var INT;
+    BEGIN
+    SELECT employee_id into test_var from employees WHERE employee_id = p_emp_id;
+        DELETE from employees WHERE employee_id = test_var;
+        RAISE NOTICE 'Employee removed success✅';
+    END
+
+$$;
+
+CALL remove_emp_id(25);
