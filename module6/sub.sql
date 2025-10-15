@@ -52,5 +52,9 @@ SELECT * from employees
     WHERE salary > (SELECT max(salary) from employees WHERE department_name = 'HR');
 
 
+SELECT *, (SELECT sum(salary) from employees) from employees;
+SELECT department_name, sum(salary) from employees GROUP BY department_name;
 
-
+-- * subquery 
+SELECT * from   --* outer query
+     (SELECT department_name, sum(salary) from employees GROUP BY department_name) as sum_dept_salary; --* sub    query
