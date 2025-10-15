@@ -1,4 +1,4 @@
--- Active: 1699467625194@@127.0.0.1@5432@ph@public
+-- Active: 1760089614932@@127.0.0.1@5432@ph@public
 CREATE TABLE employees (
     employee_id SERIAL PRIMARY KEY,
     employee_name VARCHAR(50),
