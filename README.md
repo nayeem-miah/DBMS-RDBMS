@@ -50,3 +50,18 @@ Advanced PostgreSQL features:
 - **Functions** (Procedural & Non-Procedural)
 - **Triggers**
 - **Indexing & Indexing Algorithms**
+
+---
+
+## 🚀 Module 6 — [PostgreSQL Advanced Topics](https://github.com/nayeem-miah/DBMS-RDBMS/tree/main/module7-assainment)
+
+### 🐆 Wildlife Conservation Monitoring Assignment  
+This project focuses on **PostgreSQL database operations** using a real-world scenario in wildlife conservation monitoring.  
+You will create and manage **three tables (`rangers`, `species`, `sightings`)**, insert sample data, and perform essential SQL queries including:
+
+- CRUD operations  
+- Constraints (PK, FK, CHECK, DEFAULT)  
+- JOINs  
+- Aggregations (COUNT, MAX, etc.)  
+- Filtering (WHERE, HAVING)  
+- Data manipulation (UPDATE, DELETE)
