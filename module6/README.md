@@ -158,5 +158,3 @@ EXPLAIN ANALYZE your_query;
 ```
 
 to see how PostgreSQL uses indexes and optimize your queries efficiently.
-
-```
